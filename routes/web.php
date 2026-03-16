@@ -3,13 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Broadcast;
+use App\Http\Controllers\ChatController;
+
 Broadcast::routes(['middleware' => ['web', 'auth']]);
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\ChatController;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
